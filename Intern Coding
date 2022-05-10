@@ -1,0 +1,20 @@
+cd openai-quickstart-node
+cp .env.example .env
+
+import os
+import openai
+
+gUfmuG4ucrgan3q12YdtT3BlbkFJ0FOBxWbx2EZbt1YMwtEB
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+response = openai.Completion.create(
+  engine="text-curie-001",
+  prompt="Write a tagline for a love story.\n\nForever Mine.\n\nWrite a tagline for a love story about two people in love. \n\n inseparable hearts.\n\nSuggest three taglines for a love story about two people in love. \n\n1. Our love story is one that will never be forgotten. \n2. We've been through the good and the bad and we're stronger for it. \n3. Our love is the light in the darkness, and we will never let it go.",
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0)
+  
+npm install
+npm run dev
